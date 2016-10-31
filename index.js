@@ -1,7 +1,7 @@
 const ace = require('brace');
 
 module.exports = {
-  template: "<div :style=\"{height: '300px', width: '100%'}\"></div>",
+  template: '<div :style="{height: height, width: width}"></div>',
 
   props: {
     content: {
@@ -15,6 +15,14 @@ module.exports = {
     theme: {
       type: String,
       default: 'chrome'
+    },
+    height: {
+      type: String,
+      default: '300px'
+    },
+    width: {
+      type: String,
+      default: '100%'
     }
   },
 
@@ -33,5 +41,8 @@ module.exports = {
     editor.getSession().setMode('ace/mode/' + lang);
     editor.setTheme('ace/theme/' + theme);
     editor.setValue(vm.content, 1);
+    editor.on('change', () => {
+      vm.$parent.$emit('editor-update', editor.getValue());
+    });
   }
 }
