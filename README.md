@@ -1,13 +1,13 @@
-# vue2-ace-editor
+# vue2-ace
 
-A Vue2 component for showing the [ace editor](https://ace.c9.io/).
+A Vue2 component for including the [ace editor](https://ace.c9.io/).
 
 ## How to use
 
 1. Installation
 
 ```
-npm install -save vue2-ace-editor
+npm install -save vue2-ace
 ```
 
 2. Usage
@@ -15,7 +15,7 @@ npm install -save vue2-ace-editor
 Import the component, the mode and the theme in `<script>`
 
 ```
-import editor from 'vue2-ace-editor'
+import editor from 'vue2-ace'
 import 'brace/mode/javascript'
 import 'brace/theme/chrome'
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "vue2-ace-editor",
+  "name": "vue2-ace",
   "version": "1.0.0",
   "description": "Vue 2 component based on ace/brace",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dhenkes/vue2-ace-editor.git"
+    "url": "git+https://github.com/dhenkes/vue2-ace.git"
   },
   "author": "dhenkes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dhenkes/vue2-ace-editor/issues"
+    "url": "https://github.com/dhenkes/vue2-ace/issues"
   },
-  "homepage": "https://github.com/dhenkes/vue2-ace-editor#readme",
+  "homepage": "https://github.com/dhenkes/vue2-ace#readme",
   "dependencies": {
     "brace": "^0.8.0"
   }
