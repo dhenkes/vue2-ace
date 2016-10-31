@@ -2,15 +2,13 @@
 
 A Vue2 component for including the [ace editor](https://ace.c9.io/).
 
-## How to use
-
-1. Installation
+### Installation
 
 ```
 npm install -save vue2-ace
 ```
 
-2. Usage
+### How to use
 
 Import the component, the mode and the theme in `<script>`.
 
