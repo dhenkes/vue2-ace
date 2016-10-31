@@ -12,7 +12,7 @@ npm install -save vue2-ace
 
 2. Usage
 
-Import the component, the mode and the theme in `<script>`
+Import the component, the mode and the theme in `<script>`.
 
 ```
 import editor from 'vue2-ace'
@@ -20,7 +20,7 @@ import 'brace/mode/javascript'
 import 'brace/theme/chrome'
 ```
 
-Register the component in the Vue options
+Register the component in the Vue options.
 
 ```
 components: {
@@ -28,7 +28,8 @@ components: {
 }
 ```
 
-Use the component in your `template`
+Use the component in your `template`. Make sure to change `variable` to a string
+the editor should start with (it can be an empty string too).
 
 ```
 <editor :content="variable"></editor>
@@ -58,3 +59,13 @@ component in the template.
 ```
 
 If you want to use another lang or theme, don't forget to import it.
+
+Last but not least listen on the `editor-update`. Make sure to replace
+`vm.function` with the function you want to execute.
+
+```
+mounted () {
+  const vm = this;
+  vm.$on('editor-update', vm.function);
+}
+```
