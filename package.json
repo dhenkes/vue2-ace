@@ -1,6 +1,6 @@
 {
   "name": "vue2-ace",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue 2 component based on ace/brace",
   "main": "index.js",
   "scripts": {
