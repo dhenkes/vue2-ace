@@ -26,22 +26,22 @@ module.exports = {
     }
   },
 
-  data () {
+  data: function () {
     return {
       editor: null,
     }
   },
 
-  mounted () {
+  mounted: function () {
     const vm = this;
-    let lang = vm.lang || 'javascript';
-    let theme = vm.theme || 'chrome';
-    let editor = vm.editor = ace.edit(vm.$el);
+    var lang = vm.lang;
+    var theme = vm.theme;
+    var editor = vm.editor = ace.edit(vm.$el);
     editor.$blockScrolling = Infinity;
     editor.getSession().setMode('ace/mode/' + lang);
     editor.setTheme('ace/theme/' + theme);
     editor.setValue(vm.content, 1);
-    editor.on('change', () => {
+    editor.on('change', function () {
       vm.$parent.$emit('editor-update', editor.getValue());
     });
   }
