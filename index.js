@@ -29,7 +29,7 @@ module.exports = {
   data: function () {
     return {
       editor: null,
-    }
+    };
   },
 
   mounted: function () {
@@ -45,4 +45,4 @@ module.exports = {
       vm.$parent.$emit('editor-update', editor.getValue());
     });
   }
-}
+};
