@@ -44,5 +44,12 @@ module.exports = {
     editor.on('change', function () {
       vm.$parent.$emit('editor-update', editor.getValue());
     });
+  },
+
+  watch: {
+    theme: function (newTheme) {
+      const vm = this;
+      vm.editor.setTheme('ace/theme/' + newTheme);
+    }
   }
 };
