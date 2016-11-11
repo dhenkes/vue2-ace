@@ -23,6 +23,10 @@ module.exports = {
     width: {
       type: String,
       default: '100%'
+    },
+    sync: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -47,6 +51,13 @@ module.exports = {
   },
 
   watch: {
+    content: function (newContent) {
+      const vm = this;
+      if (vm.sync) {
+        vm.editor.setValue(newContent, 1);
+      }
+    },
+
     theme: function (newTheme) {
       const vm = this;
       vm.editor.setTheme('ace/theme/' + newTheme);

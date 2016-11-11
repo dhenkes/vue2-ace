@@ -41,6 +41,7 @@ lang: javascript
 theme: chrome
 height: 300px
 width: 100%
+sync: false
 ```
 
 If you want to change any of these defaults, just include them when you use the
@@ -54,7 +55,16 @@ component in the template.
 <editor :content="variable" :lang="'html'"></editor>
 
 <editor :content="variable" :theme="'github'"></editor>
+
+<editor :content="variable" :sync="true"></editor>
 ```
+
+The theme can be changed after the component already has been mounted. Just
+change the string of the theme-variable.
+
+To sync the content of the editor to the original content-variable, set the
+sync prop to true. Watch out: Every time the the original variable updates, the
+editor will also update it's content.
 
 If you want to use another lang or theme, don't forget to import it.
 
