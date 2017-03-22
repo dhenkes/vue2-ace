@@ -1,4 +1,4 @@
-const ace = require('brace');
+var ace = require('brace');
 
 module.exports = {
   template: '<div :style="{height: height, width: width}"></div>',
@@ -37,7 +37,7 @@ module.exports = {
   },
 
   mounted: function () {
-    const vm = this;
+    var vm = this;
     var lang = vm.lang;
     var theme = vm.theme;
     var editor = vm.editor = ace.edit(vm.$el);
@@ -52,14 +52,14 @@ module.exports = {
 
   watch: {
     content: function (newContent) {
-      const vm = this;
+      var vm = this;
       if (vm.sync) {
         vm.editor.setValue(newContent, 1);
       }
     },
 
     theme: function (newTheme) {
-      const vm = this;
+      var vm = this;
       vm.editor.setTheme('ace/theme/' + newTheme);
     }
   }

@@ -5,7 +5,7 @@ A Vue2 component for including the [ace editor](https://ace.c9.io/).
 ### Installation
 
 ```
-npm install -save vue2-ace
+npm install --save vue2-ace
 ```
 
 ### How to use
@@ -73,7 +73,7 @@ Last but not least listen on the `editor-update`. Make sure to replace
 
 ```
 mounted () {
-  const vm = this;
+  var vm = this;
   vm.$on('editor-update', vm.function);
 }
 ```
