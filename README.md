@@ -71,15 +71,17 @@ editor will also update it's content.
 
 If you want to use another lang or theme, don't forget to import it.
 
-options can be passed to change font-family font-size etc. Create option object that can be passed
-to the editor.setOptions
+You can pass extra options like font-family or font-size using the option prop.
+It is set in the component using `editor.setOptions()`.
 
 ```
 data () {
   return {
-    options: {fontSize: '12pt'}
+    options: {
+      fontSize: '12pt'
+    }
   }
-},
+}
 ```
 
 Last but not least listen on the `editor-update`. Make sure to replace
