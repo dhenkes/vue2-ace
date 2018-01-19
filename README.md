@@ -1,3 +1,8 @@
+# NO LONGER MAINTAINED
+
+Due to lack of time I can't maintain this component anymore. If someone is interested
+in taking it over and going further with the development, feel free to contact me.
+
 # vue2-ace
 
 A Vue2 component for including the [ace editor](https://ace.c9.io/).
